@@ -1,0 +1,158 @@
+#:import OpenUrl webbrowser.open
+#:import Factory kivy.factory.Factory
+<ItemConfirm>
+    divider: None
+    CheckboxRightWidget:
+        id: check
+        score: root.text  
+        group: "check"
+        on_active: app.check_active(self.group)          
+<ConfirmButton@MDFlatButton>:
+    text: "ok"
+    disabled: not app.active  
+    on_release: app.score_limit()    
+<ConfirmDialog>:
+    title: "number of layers" 
+    type: "confirmation"
+    auto_dismiss: False
+    items: [ Factory.ItemConfirm(text="5"), Factory.ItemConfirm(text="10"), Factory.ItemConfirm(text="15"), Factory.ItemConfirm(text="20") ]
+    buttons: [ Factory.ConfirmButton() ]
+ScreenManager:	
+    MenuScreen:
+    ProfileScreen:
+<ProfileScreen>:
+    id : nav_drawer
+    name: 'profile'
+    MDLabel:
+        text: 'Profile'
+        halign: 'center'
+    MDRectangleFlatButton:
+        text: 'Back'
+        pos_hint: {'center_x':0.5,'center_y':0.1}
+        on_press: root.manager.current = 'menu' 
+<MenuScreen>:	
+	name: 'menu'	
+	MDScreen:
+	    AKSilverAppbar:
+	        max_height: '250dp'
+	        title:'Encrypt py'
+	        type: "bottom"	        
+	        left_action_items: [["telegram", lambda x: OpenUrl("https://t.me/DIBIBl")]]	        
+	        right_action_items: [["youtube", lambda x: OpenUrl("https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA")]]	        
+	        pin_top: True
+	        hide_toolbar: True
+	        radius: dp(20)
+	        toolbar_bg: app.theme_cls.primary_color
+	        AKSilverAppbarHeader:
+	            MDScreen:
+	                md_bg_color: app.theme_cls.primary_color
+	                MDBoxLayout:
+	                    adaptive_height:True
+	                    orientation: "vertical"
+	                    pos_hint:{'center_x':.5,'center_y':.5}
+	                    spacing:"20dp"
+	                    MDBoxLayout:
+	                        size_hint:None,None
+	                        size:'85dp','85dp'
+	                        pos_hint:{'center_x':.5,'center_y':.5}
+	                        Image:
+	                            source: "img/k-1.png"
+	                            allow_stretch: True
+	                            keep_ratio: False
+	                    MDLabel:
+	                        text:'Developer by ruks'
+	                        halign:"center"
+	                        adaptive_height:True
+	        AKSilverAppbarContent:
+	            padding:'20dp'
+	            spacing:'20dp'
+	            id: content
+	            size_hint_y: None
+	            height: self.minimum_height
+	            orientation: "vertical"
+	            MDIconButton:	                
+	                icon: "brightness-4" 
+	                on_release:	                	
+	                	app.theme_cls.primary_palette = "DeepPurple" if app.theme_cls.primary_palette == "Cyan" else "Cyan"   
+	                	   	
+	                	app.theme_cls.theme_style = "Light" if app.theme_cls.theme_style == "Dark" else "Dark"	                	
+	            MDLabel:		
+	                text:"Encrypt multiple times"
+	                adaptive_height:True
+	            MDCard:
+	                size_hint_y:None
+	                height:"180dp"
+	                orientation:"vertical"                
+	                padding:"10dp"
+	                TwoLineIconListItem:
+	                    text: "lambda layers"
+	                    on_release: app.confirmation_lambda()    
+	                    secondary_text: "Encrypt type lambda layers"
+	                    IconLeftWidget:
+	                        icon: "img/a5.png"
+	                TwoLineIconListItem:
+	                    text: "marsha layersl"	                    
+	                    secondary_text: "Encrypt type marsha layers"
+	                    on_release: app.show_confirmation_marshal()    	    
+	                    IconLeftWidget:
+	                        icon: "img/encrypt9.png"
+	            MDLabel:
+	                text:"encrypt me termux"         
+	                adaptive_height:True
+	            MDCard:	                
+	                size_hint_y:None
+	                height:"80dp"
+	                orientation:"vertical"                
+	                padding:"10dp"
+	                TwoLineIconListItem:
+	                    text: "py_compile"
+	                    secondary_text: "Encrypt type pyc"
+	                    on_release: app.on_pyc()    	              
+	                    divider:None
+	                    IconLeftWidget:
+	                        icon: "img/enc11.png"
+	            MDLabel:
+	                text:"One time encryption"
+	                adaptive_height:True
+	            MDCard:
+	                size_hint_y:None
+	                height:"450dp"
+	                orientation:"vertical"                
+	                padding:"10dp"
+	                TwoLineIconListItem:
+	                    text: "marshal"
+	                    secondary_text: "Encrypt type marshal"
+	                    on_release: app.on_marshal()    
+	                    IconLeftWidget:
+	                        icon: "img/enc7.png"
+	                TwoLineIconListItem:
+	                    text: "lambda"
+	                    secondary_text: "Encrypt type lambda"
+	                    on_release: app.on_lambda()
+	                    IconLeftWidget:
+	                    	icon: "img/enc13.png"
+	                TwoLineIconListItem:
+	                    text: "marshal,zlib,base64"
+	                    secondary_text: "Encrypt type marshal,zlib,base64"
+	                    on_release: app.on_zlib()    
+	                    IconLeftWidget:
+	                        icon: "img/enc5.png"
+	                TwoLineIconListItem:
+	                    text: "base64"
+	                    secondary_text: "Encrypt type base64"
+	                    on_release: app.on_base64()    
+	                    IconLeftWidget:
+	                        icon: "img/enc12.png"	                   
+	                TwoLineIconListItem:
+	                    text: "base32"
+	                    secondary_text: "Encrypt type base32"
+	                    on_release: app.on_base32()    
+	                    IconLeftWidget:
+	                        icon: "img/enc10.png"	
+	                TwoLineIconListItem:
+	                    text: "base16"
+	                    secondary_text: "Encrypt type base16"
+	                    on_release: app.on_base16()    
+	                    divider:None
+	                    IconLeftWidget:
+	                        icon: "img/a2.png"
