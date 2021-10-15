@@ -1,0 +1,13 @@
+{
+	"base64": "#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nimport base64\nexec(base64.b64decode(",
+	
+	"base16": "#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nimport base64\nexec(base64.b16decode(",
+
+	"base32": "#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nimport base64\nexec(base64.b32decode(",	
+	
+	"marshal":"#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nimport marshal\nexec(marshal.loads(",
+	
+	"zlib":"#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nimport marshal,zlib,base64\nexec(marshal.loads(zlib.decompress(base64.b64decode(",
+	
+	"lambda":"#!/usr/bin/env python\n# -*- coding: utf-8 -*-\n# ---------------------\n# Telegram : @DIBIBl , @TDTDI , @ruks3\n# Coded by ruks\n# YouTube : https://youtube.com/channel/UCUNbzQRjfAXGCKI1LY72DTA\n# Instagram : https://instagram.com/_v_go?utm_medium=copy_link\n# github : https://github.com/muntazir-halim\n# ---------------------\nexec((lambda _____, ______ : ______(eval((lambda ____,__,_ : ____.join([_(___) for ___ in __]))('',[95, 95, 105, 109, 112, 111, 114, 116, 95, 95, 40, 34, 122, 108, 105, 98, 34, 41, 46, 100, 101, 99, 111, 109, 112, 114, 101, 115, 115],chr))(_____),'<https://t.me/DIBIBl','exec'))("
+}
